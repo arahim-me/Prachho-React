@@ -1,0 +1,30 @@
+.footer{
+    padding: 35px 0;
+}
+.footer .copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.footer .footer-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.footer-social .fab{
+    font-size: 24px;
+    padding: 10px;
+    margin-left: 15px;
+    background: #eef2f6;
+    color: #afb4bf;
+    border-radius: 50%;
+}
+.footer-social .fab:hover{
+    color: #fff;
+    background: #ff545a;
+    transition: 0.5s;
+}
+
