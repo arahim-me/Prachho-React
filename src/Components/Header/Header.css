@@ -1,0 +1,24 @@
+.hero-section {
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(122, 122, 207, 0.5), rgba(4, 44, 133, 0.5)),
+                  url("./../../assets/images/welcome-hero/banner.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-section .btn {
+    margin: 15px 0;
+    padding: 10px 25px;
+    background: #ff545a;
+}

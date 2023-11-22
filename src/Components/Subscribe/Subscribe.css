@@ -1,0 +1,18 @@
+.subscribe-section{
+    background: #f8fafb;
+    padding: 55px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+input{
+    max-width: 600px;
+    margin: auto;
+}
+.subscribe-section .btn{
+    margin: 15px 0;
+    padding: 10px 25px;
+    background: #ff545a;
+}
