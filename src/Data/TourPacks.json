@@ -1,0 +1,30 @@
+[
+    {
+        "id": "id1",
+        "img": "https://images.pexels.com/photos/6091193/pexels-photo-6091193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Domestic Tour",
+        "desc": [
+            "Private Tour",
+            "Family Tour",
+            "Corporate Tour",
+            "Entier Country Tour",
+            "Holiday Tour",
+            "Vaccation Tour"
+        ]
+            
+    },
+    {
+        "id": "id2",
+        "img": "https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "International Tour",
+        "desc": [
+            "Private Tour",
+            "Family Tour",
+            "Corporate Tour",
+            "Entier Country Tour",
+            "Holiday Tour",
+            "Vaccation Tour"
+        ]
+            
+    }
+]

@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 function Header() {
     return (
-        <div className="hero-section">
+        <div className="hero-section">            
             <div className="container">
                 <h2>BEST PLACE TO FIND AND EXPLORE
                     THAT ALL YOU NEED</h2>

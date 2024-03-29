@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Services",
+        "route": "services"
+    },
+    {
+        "name": "Blog",
+        "route": "blog"
+    },
+    {
+        "name": "Articles",
+        "route": "articles"
+    },
+    {
+        "name": "Photography Tour",
+        "route": "photography-tour"
+    },
+    {
+        "name": "Register",
+        "route": "register"
+    }
+]

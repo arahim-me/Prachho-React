@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BlogImg from '../../assets/images/blog/b1.jpg';
-function Blogs() {
+import BlogsData from '../../Data/Blogs.json'
+import { useNavigate } from 'react-router-dom';
+function Blogs(props) {
+    const [blogs, setBlogs] = useState(BlogsData);
+    const navigate = useNavigate();
+    const trunc = (str, num)=>{
+        if(str.length> num){
+            return str.slice(0, num) + "...."
+        }else{
+            return str
+        }
+    }
     return (
         <div className="blogs">
             <div className="container">
@@ -9,67 +20,25 @@ function Blogs() {
                         <h2>News & Articles</h2>
                         <h5>Always upto date with our latest News and Articles</h5>
                     </div>
-                    <div className="cards">                        
-                            <div className="card m-3">
-                                <img src={BlogImg} className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"> How to find your Desired Place more quickly</h5>
-                                    <div className="post-writer d-flex justify-content-between">
-                                        <p>Posted by: <span>Abdur Rahim</span></p><p>Date: <span>30-10-2023</span></p>
+                    <div className="cards">
+                        {
+                            blogs.map(blog => {
+                                const {id, title, description, author, date} = blog;
+                                return (
+                                    <div className="card m-3">
+                                        <img src={BlogImg} className="card-img-top" alt="" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{title}</h5>
+                                            <div className="post-writer d-flex justify-content-between">
+                                                <p>By: <span>{author}</span></p><p>Date: <span>{date}</span></p>
+                                            </div>
+                                            <p className="card-text">{trunc(description, 100)}</p>
+                                        </div>
+                                        <button className='btn mx-auto mb-3' onClick={()=>{navigate(`/blog/${id}`)}}>Read More</button>
                                     </div>
-                                    <p className="card-text">Some quick example text to build on the How to find your Desired Place more quickly and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>                        
-                            <div className="card m-3">
-                                <img src={BlogImg} className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"> How to find your Desired Place more quickly</h5>
-                                    <div className="post-writer d-flex justify-content-between">
-                                        <p>Posted by: <span>Abdur Rahim</span></p><p>Date: <span>30-10-2023</span></p>
-                                    </div>
-                                    <p className="card-text">Some quick example text to build on the How to find your Desired Place more quickly and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>                        
-                            <div className="card m-3">
-                                <img src={BlogImg} className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"> How to find your Desired Place more quickly</h5>
-                                    <div className="post-writer d-flex justify-content-between">
-                                        <p>Posted by: <span>Abdur Rahim</span></p><p>Date: <span>30-10-2023</span></p>
-                                    </div>
-                                    <p className="card-text">Some quick example text to build on the How to find your Desired Place more quickly and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>                        
-                            <div className="card m-3">
-                                <img src={BlogImg} className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"> How to find your Desired Place more quickly</h5>
-                                    <div className="post-writer d-flex justify-content-between">
-                                        <p>Posted by: <span>Abdur Rahim</span></p><p>Date: <span>30-10-2023</span></p>
-                                    </div>
-                                    <p className="card-text">Some quick example text to build on the How to find your Desired Place more quickly and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>                        
-                            <div className="card m-3">
-                                <img src={BlogImg} className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"> How to find your Desired Place more quickly</h5>
-                                    <div className="post-writer d-flex justify-content-between">
-                                        <p>Posted by: <span>Abdur Rahim</span></p><p>Date: <span>30-10-2023</span></p>
-                                    </div>
-                                    <p className="card-text">Some quick example text to build on the How to find your Desired Place more quickly and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>                        
-                            <div className="card m-3">
-                                <img src={BlogImg} className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"> How to find your Desired Place more quickly</h5>
-                                    <div className="post-writer d-flex justify-content-between">
-                                        <p>Posted by: <span>Abdur Rahim</span></p><p>Date: <span>30-10-2023</span></p>
-                                    </div>
-                                    <p className="card-text">Some quick example text to build on the How to find your Desired Place more quickly and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>                        
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

@@ -1,1 +1,38 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background: #ff545a;
+    color: #fff;
+}
+.input-form{
+    margin: 0 auto;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-form *{
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px 15;
+}
+.input-form input{
+    padding: 5px 15px;
+}
+.input-form textarea{
+    height: 200px;
+    padding: 8px 15px;
+}
+.btn{
+    width: fit-content;
+}

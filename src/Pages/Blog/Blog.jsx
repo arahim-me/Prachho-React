@@ -4,8 +4,7 @@ import Blogs from '../../Components/Blogs/Blogs';
 function Blog() {
     return (
         <>
-            <Blogs/>
-            
+            <Blogs/>            
         </>
     );
 }

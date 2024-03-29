@@ -34,6 +34,21 @@ function Explore() {
                                 <div className="rating row justify-content-between align-items-center px-3">
                                     <div className="rate"><span className='btn btn-secondary mr-4'>5.0</span><span>15 Rating</span></div>
                                     <div className="price"><span>From <span className="text-danger">5k$-10k$</span></span></div>
+                                    <div className="in-at"><span>Destination</span></div>
+                                </div>
+                                <div className="post-writer row my-3 justify-content-between align-items-center">
+                                    <img src={writer} alt="" className="img-fluid profile col-3" />
+                                    <p className='col-9'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card m-3">
+                            <img src={BlogImg} className="card-img-top" alt="" />
+                            <div className="card-body">
+                                <h5 className="card-title">Europe Tour</h5>
+                                <div className="rating row justify-content-between align-items-center px-3">
+                                    <div className="rate"><span className='btn btn-secondary mr-4'>5.0</span><span>15 Rating</span></div>
+                                    <div className="price"><span>From <span className="text-danger">5k$-10k$</span></span></div>
                                     <div className="in-at"><span>Hotel</span></div>
                                 </div>
                                 <div className="post-writer row my-3 justify-content-between align-items-center">
