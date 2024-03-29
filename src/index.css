@@ -15,12 +15,3 @@ body {
   justify-content: center;
   align-items: center;
 }
-.cards{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.card{
-  max-width: 330px;
-}

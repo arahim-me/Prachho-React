@@ -2,9 +2,11 @@ import React from 'react';
 import './Services.css';
 function Services() {
     return (
-        <div className="services-section">
-            <h2>Services We Provide</h2>
-            <p>The Best Servide we provided</p>
+        <section className="services-section">
+            <div className="top-content">
+                <h2 className='title'>Services We Provide</h2>
+                <p className='desc'>The Best Servide we provided</p>
+            </div>
             <div className="container">
                 <div className="service">
                     <i className="fas fa-solid fa-hotel"></i>
@@ -32,7 +34,7 @@ function Services() {
                     <p>120 listing</p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

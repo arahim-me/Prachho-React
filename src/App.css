@@ -4,6 +4,13 @@
     box-sizing: border-box;
     list-style-type: none;
 }
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 .inner{
     display: flex;
     justify-content: center;
@@ -31,8 +38,57 @@
 }
 .input-form textarea{
     height: 200px;
-    padding: 8px 15px;
+    padding: 8px 16px;
 }
 .btn{
     width: fit-content;
 }
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section .top-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+/* Post Design */
+
+.post{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.post .author{
+    justify-content: flex-start;
+}
+.post .author img{
+    width: 50px;
+    height: 50px;
+}
+.post .writing{
+    text-align: justify;
+}
+/* Card Design */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .card{
+    max-width: 330px;
+  }

@@ -1,7 +1,13 @@
-.card .profile{
-    width: 100px;
+.card .rating{
+    justify-content: space-around;
 }
-img.profile{
-    width: 70px;
-    height: 70px;
+.rating .rate{
+    border: 1px solid #ff545a;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.rating .review{
+    border: 1px solid #ff545a;
+    border-radius: 5px;
+    padding: 5px 10px;
 }

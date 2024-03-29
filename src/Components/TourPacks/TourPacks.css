@@ -1,8 +1,22 @@
-.tour-packs{
-    padding: 40px 0;
-}
+
 .tour-packs .container{
     margin: 20px auto;
     display: flex;
     justify-content: center;
+}
+.tour-packs .container.row{
+    gap: 20px;
+}
+.tour-packs .pack{
+    max-width: 500px;
+    border: 1px solid #ff545a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tour-packs .tour-img{
+    height: 380px;
+    overflow: hidden;
+}
+.tour-packs .tour-info{
+    padding: 25px;
 }

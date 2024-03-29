@@ -13,19 +13,19 @@ function Blogs(props) {
         }
     }
     return (
-        <div className="blogs">
+        <section className="blogs">
             <div className="container">
                 <div className="inner my-5 p">
-                    <div className="title text-center my-3">
-                        <h2>News & Articles</h2>
-                        <h5>Always upto date with our latest News and Articles</h5>
+                    <div className="top-content">
+                        <h2 className='title'>News & Articles</h2>
+                        <h5 className='desc'>Always upto date with our latest News and Articles</h5>
                     </div>
                     <div className="cards">
                         {
                             blogs.map(blog => {
                                 const {id, title, description, author, date} = blog;
                                 return (
-                                    <div className="card m-3">
+                                    <div className="card">
                                         <img src={BlogImg} className="card-img-top" alt="" />
                                         <div className="card-body">
                                             <h5 className="card-title">{title}</h5>
@@ -42,7 +42,7 @@ function Blogs(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
