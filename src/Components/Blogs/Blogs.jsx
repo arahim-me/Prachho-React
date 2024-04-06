@@ -2,16 +2,10 @@ import React, { useState } from 'react';
 import BlogImg from '../../assets/images/blog/b1.jpg';
 import BlogsData from '../../Data/Blogs.json'
 import { useNavigate } from 'react-router-dom';
+import trunc from '../../functions/Trunc';
 function Blogs(props) {
     const [blogs, setBlogs] = useState(BlogsData);
-    const navigate = useNavigate();
-    const trunc = (str, num)=>{
-        if(str.length> num){
-            return str.slice(0, num) + "...."
-        }else{
-            return str
-        }
-    }
+    const navigate = useNavigate();    
     return (
         <section className="blogs">
             <div className="container">
@@ -25,7 +19,7 @@ function Blogs(props) {
                             blogs.map(blog => {
                                 const {id, title, description, author, date} = blog;
                                 return (
-                                    <div className="card">
+                                    <div className="card" key={id}>
                                         <img src={BlogImg} className="card-img-top" alt="" />
                                         <div className="card-body">
                                             <h5 className="card-title">{title}</h5>

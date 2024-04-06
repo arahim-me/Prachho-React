@@ -1,8 +1,13 @@
-import React from 'react';
-import BlogImg from '../../assets/images/explore/e3.jpg';
+import React, { useState } from 'react';
+import img from '../../assets/images/explore/e3.jpg';
 import writer from '../../assets/images/explore/person.png';
+import packages from '../../Data/Packages.json';
 import './Explore.css';
+import { useNavigate } from 'react-router-dom';
+import trunc from '../../functions/Trunc';
 function Explore() {
+    const [packs, setPacks] = useState(packages);
+    const navigate = useNavigate();
     return (
         <section className="blogs">
             <div className="container">
@@ -12,120 +17,29 @@ function Explore() {
                         <h5 className='desc'>Explore New place, food, culture around the world and many more</h5>
                     </div>
                     <div className="cards row">
-                        <div className="card">
-                            <img src={BlogImg} className="card-img-top" alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title">Europe Tour</h5>
-                                <div className="rating row">
-                                    <div className="row"><span className='rate'>5.0</span><span className='review'>15 Rating</span></div>
-                                    <div className="price"><span className="text-danger">5k$-10k$</span></div>
+                        {
+                            packs.map(packs => {
+                                const { id, title, desc, rating, price } = packs;
+                                return (
+                                    <div className="card" key={id}>
+                                        <img src={img} className="card-img-top" alt="" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{title}</h5>
+                                            <div className="rating row">
+                                                <div className="row"><span className='rate'>{rating.avg}</span><span className='review'>{rating.total} Rating</span></div>
+                                                <div className="price"><span className="text-danger">{price}</span></div>
 
-                                </div>
-                                <div className="post col">
-                                    <div className="author row">
-                                        <img src={writer} alt="" className="author-img" />
-                                        <h6 className="author-name">Abdur Rahim</h6>
+                                            </div>
+                                            <div className="post col">
+                                                <p className='writing'>{trunc(desc, 100)}</p>
+                                            </div>
+                                            <div className="row"><button className="btn" onClick={()=>{navigate(`/package/${id}`)}}>View Package</button></div>
+                                        </div>
                                     </div>
-                                    <p className='writing'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
-                                </div>
-                                <div className="row"><button className="btn">View Post</button></div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <img src={BlogImg} className="card-img-top" alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title">Europe Tour</h5>
-                                <div className="rating row">
-                                    <div className="row"><span className='rate'>5.0</span><span className='review'>15 Rating</span></div>
-                                    <div className="price"><span className="text-danger">5k$-10k$</span></div>
+                                )
+                            })
+                        }
 
-                                </div>
-                                <div className="post col">
-                                    <div className="author row">
-                                        <img src={writer} alt="" className="author-img" />
-                                        <h6 className="author-name">Abdur Rahim</h6>
-                                    </div>
-                                    <p className='writing'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
-                                </div>
-                                <div className="row"><button className="btn">View Post</button></div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <img src={BlogImg} className="card-img-top" alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title">Europe Tour</h5>
-                                <div className="rating row">
-                                    <div className="row"><span className='rate'>5.0</span><span className='review'>15 Rating</span></div>
-                                    <div className="price"><span className="text-danger">5k$-10k$</span></div>
-
-                                </div>
-                                <div className="post col">
-                                    <div className="author row">
-                                        <img src={writer} alt="" className="author-img" />
-                                        <h6 className="author-name">Abdur Rahim</h6>
-                                    </div>
-                                    <p className='writing'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
-                                </div>
-                                <div className="row"><button className="btn">View Post</button></div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <img src={BlogImg} className="card-img-top" alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title">Europe Tour</h5>
-                                <div className="rating row">
-                                    <div className="row"><span className='rate'>5.0</span><span className='review'>15 Rating</span></div>
-                                    <div className="price"><span className="text-danger">5k$-10k$</span></div>
-
-                                </div>
-                                <div className="post col">
-                                    <div className="author row">
-                                        <img src={writer} alt="" className="author-img" />
-                                        <h6 className="author-name">Abdur Rahim</h6>
-                                    </div>
-                                    <p className='writing'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
-                                </div>
-                                <div className="row"><button className="btn">View Post</button></div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <img src={BlogImg} className="card-img-top" alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title">Europe Tour</h5>
-                                <div className="rating row">
-                                    <div className="row"><span className='rate'>5.0</span><span className='review'>15 Rating</span></div>
-                                    <div className="price"><span className="text-danger">5k$-10k$</span></div>
-
-                                </div>
-                                <div className="post col">
-                                    <div className="author row">
-                                        <img src={writer} alt="" className="author-img" />
-                                        <h6 className="author-name">Abdur Rahim</h6>
-                                    </div>
-                                    <p className='writing'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
-                                </div>
-                                <div className="row"><button className="btn">View Post</button></div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <img src={BlogImg} className="card-img-top" alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title">Europe Tour</h5>
-                                <div className="rating row">
-                                    <div className="row"><span className='rate'>5.0</span><span className='review'>15 Rating</span></div>
-                                    <div className="price"><span className="text-danger">5k$-10k$</span></div>
-
-                                </div>
-                                <div className="post col">
-                                    <div className="author row">
-                                        <img src={writer} alt="" className="author-img" />
-                                        <h6 className="author-name">Abdur Rahim</h6>
-                                    </div>
-                                    <p className='writing'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?</p>
-                                </div>
-                                <div className="row"><button className="btn">View Post</button></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

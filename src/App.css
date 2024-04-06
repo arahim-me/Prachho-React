@@ -92,3 +92,11 @@ section .top-content{
   .card{
     max-width: 330px;
   }
+
+  /* display a section Design */
+  .display{
+    padding: 30px 0;
+  }
+  .display .card{
+    margin: 20px auto;
+  }

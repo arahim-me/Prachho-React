@@ -9,7 +9,7 @@
     },
     {
         "name": "Articles",
-        "route": "articles"
+        "route": "packages"
     },
     {
         "name": "Photography Tour",

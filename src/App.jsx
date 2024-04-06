@@ -12,6 +12,7 @@ import Login from './Components/Login/Login';
 import TopNav from './Components/TopNav/TopNav';
 import Explore from './Components/Explore/Explore';
 import BlogDetails from './Pages/BlogDetails/BlogDetails';
+import PackDetails from './Pages/PackDetails/PackDetails';
 
 
 function App() {
@@ -20,17 +21,18 @@ function App() {
       <TopNav></TopNav>
       <NavBar></NavBar>
       <Routes>
-        <Route path='/' element={<Home></Home>}/>
-        <Route path='/services' element={<Services></Services>} />
-        <Route path='/blog' element={<Blog></Blog>} />
-        <Route path='/contact' element={<Contact></Contact>} />
-        <Route path='/blogs' element={<Blog></Blog>} />
-        <Route path='/blog/:id' element={<BlogDetails></BlogDetails>} />
-        <Route path='/articles' element={<Explore></Explore>} />
-        <Route path='/photography-tour' element={<Explore></Explore>} />
-        <Route path='/contact' element={<Contact></Contact>} />
-        <Route path='/register' element={<Register></Register>} />
-        <Route path='/login' element={<Login></Login>} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/services' element={<Services/>} />
+        <Route path='/blog' element={<Blog/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/blogs' element={<Blog/>} />
+        <Route path='/blog/:id' element={<BlogDetails/>} />
+        <Route path='/packages' element={<Explore/>} />
+        <Route path='/package/:id' element={<PackDetails/>} />
+        <Route path='/photography-tour' element={<Explore/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/register' element={<Register/>} />
+        <Route path='/login' element={<Login/>} />
       </Routes>
       <Footer></Footer>
       </BrowserRouter>

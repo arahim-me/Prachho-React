@@ -1,0 +1,74 @@
+[
+    {
+        "id": "id1",
+        "title": "Europe Tour",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?",
+        "rating": {
+            "avg": "4.8",
+            "total": "16"
+        },
+        "price": "5k$-10k$",
+        "img": ""
+        
+    },
+    {
+        "id": "id2",
+        "title": "Japan Tour",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?",
+        "rating": {
+            "avg": "4.8",
+            "total": "16"
+        },
+        "price": "5k$-10k$",
+        "img": ""
+        
+    },
+    {
+        "id": "id3",
+        "title": "Bangladesh Tour",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?",
+        "rating": {
+            "avg": "4.8",
+            "total": "16"
+        },
+        "price": "5k$-10k$",
+        "img": ""
+        
+    },
+    {
+        "id": "id4",
+        "title": "Saudi-Arabia Tour",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?",
+        "rating": {
+            "avg": "4.8",
+            "total": "16"
+        },
+        "price": "5k$-10k$",
+        "img": ""
+        
+    },
+    {
+        "id": "id5",
+        "title": "Malayeshiya Tour",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?",
+        "rating": {
+            "avg": "4.8",
+            "total": "16"
+        },
+        "price": "5k$-10k$",
+        "img": ""
+        
+    },
+    {
+        "id": "id6",
+        "title": "Russia Tour",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi itaque dolores laudantium nulla harum sunt magnam consequatur explicabo rem?",
+        "rating": {
+            "avg": "4.8",
+            "total": "16"
+        },
+        "price": "5k$-10k$",
+        "img": ""
+        
+    }
+]
